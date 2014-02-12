@@ -30,7 +30,7 @@ syn match taskpaperContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match taskpaperDone		/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match taskpaperReEntered	/^.*\s@re-entered\(\(\s\|([^)]*)\).*\)\?$/
 syn match taskpaperCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
-
+syn region taskPaperUrgent start="Old:" end="^$"
 syn sync fromstart
 
 "highlighting for Taskpaper groups
@@ -41,6 +41,7 @@ HiLink taskpaperDone          Statement
 HiLink taskpaperReEntered     Constant
 HiLink taskpaperCancelled     NonText
 HiLink taskpaperComment       Comment
+HiLink taskpaperUrgent        Title
 
 call taskpaper#tag_style_dict(g:task_paper_styles)
 
