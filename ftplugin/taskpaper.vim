@@ -29,7 +29,7 @@ endif
 
 " Define a default unfinished project name
 if !exists('g:task_paper_unfinished_project')
-    let g:task_paper_unfinished_project = "Unfinished"
+    let g:task_paper_unfinished_project = "New"
 endif
 
 " When moving a task, should the cursor follow or stay in the same place
